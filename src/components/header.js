@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Typography} from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -56,39 +56,32 @@ function Header(props) {
         console.log(e)
     }
     return (
-        <Box sx={{ flexGrow: 1,}} >
-            <AppBar position="static" sx={{backgroundColor:'white'}} >
-                <Toolbar  >
-                    {/*<IconButton*/}
-                    {/*    size="large"*/}
-                    {/*    edge="start"*/}
-                    {/*    color="inherit"*/}
-                    {/*    aria-label="open drawer"*/}
-                    {/*    sx={{ mr: 2 }}*/}
-                    {/*>*/}
-                    {/*    <MenuIcon />*/}
-                    {/*</IconButton>*/}
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        <img src={logo} alt="logo"/>
-                    </Typography>
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
-                            onChange={(e)=>searchUn(e.target.value)}
-                        />
-                    </Search>
-                </Toolbar>
-            </AppBar>
-        </Box>
+        <Container>
+            <Box sx={{ flexGrow: 1,}} >
+                <AppBar position="static" sx={{backgroundColor:'white',boxShadow:0}} >
+                    <Toolbar>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+                            <img src={logo} alt="logo"/>
+                        </Typography>
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{ 'aria-label': 'search' }}
+                                onChange={(e)=>searchUn(e.target.value)}
+                            />
+                        </Search>
+                    </Toolbar>
+                </AppBar>
+            </Box>
+        </Container>
     );
 }
 

@@ -41,8 +41,9 @@ function Section(props) {
                             textShadow: "0px 7px 7px rgba(0, 0, 0, 0.7);",
                             lineHeight: 1.5,
                             color: "#fff",
-                            fontFamily: "Rozha One, serif",
-                            fontSize: { xs: '50px', sm: '70px',md:'100px',lg:'150px' }
+                            fontFamily: "Roboto,sans-serif",
+                            fontSize: { xs: '50px', sm: '70px',md:'100px',lg:'150px' },
+                            fontWeight:'bold'
                         }}
                     >
                         Top Universities
@@ -51,17 +52,20 @@ function Section(props) {
                         variant="h3"
                         sx={{
                             maxWidth: 900,
-                            textAlign: "center",
                             textShadow: "0px 7px 7px rgba(0, 0, 0, 0.7);",
                             lineHeight: 1.5,
                             color: "#fff",
-                            fontFamily: "Rozha One, serif",
-                            fontSize:'20px'
+                            fontSize: {lg:'20px',md:'18px',sm:'16px',xs:'14px'},
+                            fontFamily: "Roboto,sans-serif",
+                            marginBottom:'40px',
+
+
+
                         }}
                     >
                         What are the most popular Universities in the world?
                     </Typography>
-                    <Button sx={{backgroundColor:'#001C3D',borderRadius: '36.5px',color:'white',paddingX:'30px',paddingY:'8px'}}>Go to see</Button>
+                    <Button sx={{fontFamily: "Roboto,sans-serif",backgroundColor:'#001C3D',borderRadius: '36.5px',color:'white',paddingX:'30px',paddingY:'8px'}}>Go to see</Button>
                 </Box>
             </Box>
         </Wrapper>
