@@ -2,14 +2,12 @@ import React from 'react';
 import {Box, Container, Typography} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../pages/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
-import {alpha, styled} from "@mui/material/styles";
+import { styled} from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled('div')(({theme}) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -18,7 +16,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
 }));
-const Search = styled('div')(({ theme }) => ({
+const Search = styled('div')(({theme}) => ({
     position: 'relative',
     borderRadius: '20px',
     backgroundColor: '#F0F0F0',
@@ -31,10 +29,10 @@ const Search = styled('div')(({ theme }) => ({
         marginLeft: theme.spacing(1),
         width: 'auto',
     },
-    color:'grey'
+    color: 'grey'
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
+const StyledInputBase = styled(InputBase)(({theme}) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
@@ -51,31 +49,31 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-function Header(props) {
-    const searchUn=(e)=>{
+function Header() {
+    const searchUn = (e) => {
         console.log(e)
     }
     return (
         <Container>
-            <Box sx={{ flexGrow: 1,}} >
-                <AppBar position="static" sx={{backgroundColor:'white',boxShadow:0}} >
+            <Box sx={{flexGrow: 1,}}>
+                <AppBar position="static" sx={{backgroundColor: 'white', boxShadow: 0}}>
                     <Toolbar>
                         <Typography
                             variant="h6"
                             noWrap
                             component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                            sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
                         >
                             <img src={logo} alt="logo"/>
                         </Typography>
                         <Search>
                             <SearchIconWrapper>
-                                <SearchIcon />
+                                <SearchIcon/>
                             </SearchIconWrapper>
                             <StyledInputBase
                                 placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                                onChange={(e)=>searchUn(e.target.value)}
+                                inputProps={{'aria-label': 'search'}}
+                                onChange={(e) => searchUn(e.target.value)}
                             />
                         </Search>
                     </Toolbar>
